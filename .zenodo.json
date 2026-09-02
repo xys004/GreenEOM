@@ -1,0 +1,38 @@
+{
+  "title": "GreenEOM: symbolic equation-of-motion Green functions for spin-orbit-coupled rings",
+  "description": "Symbolic generator for double-time (Zubarev) Green functions and their equations of motion, with a steady-state Keldysh layer, applied to spin-orbit-coupled mesoscopic rings. The equations are generated from the Hamiltonian rather than transcribed, which makes hermiticity, gauge covariance and the support of each equation mechanically testable. Includes an independent second implementation in Python of the central quantitative results, and the deposited logs of the calculations reported in the accompanying paper.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Bolivar, Nelson",
+      "affiliation": "Escuela de Fisica, Facultad de Ciencias, Universidad Central de Venezuela"
+    },
+    {
+      "name": "Mora, Emma",
+      "affiliation": "Escuela de Fisica, Facultad de Ciencias, Universidad Central de Venezuela"
+    },
+    {
+      "name": "Pereira, Dayanna",
+      "affiliation": "Escuela de Fisica, Facultad de Ciencias, Universidad Central de Venezuela"
+    },
+    {
+      "name": "Cartagena, Judith",
+      "affiliation": "Escuela de Fisica, Facultad de Ciencias, Universidad Central de Venezuela"
+    },
+    {
+      "name": "Verrilli, David",
+      "affiliation": "Escuela de Fisica, Facultad de Ciencias, Universidad Central de Venezuela"
+    }
+  ],
+  "keywords": [
+    "Green functions",
+    "equation of motion",
+    "spin-orbit coupling",
+    "mesoscopic rings",
+    "persistent currents",
+    "Keldysh",
+    "computer algebra"
+  ],
+  "access_right": "open"
+}

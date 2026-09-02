@@ -1,0 +1,41 @@
+==============================================
+ The three rings of Table II, opened
+==============================================
+  N = 6, leads on sites 1 and 4, wide band, Gamma = 0.3, t = 1
+
+ 1. consistency
+    T(phi) - T(-phi), no SOC : 1.3877787807814457e-17
+  PASS  two-terminal reciprocity T(phi) = T(-phi)
+  PASS  transmission is bounded by the number of channels
+
+ 2. Rashba <-> Dresselhaus, with leads
+    max |P_z(al,be) + P_z(be,al)| : 2.220446049250313e-15
+  PASS  the mirror survives with reservoirs attached
+
+ 3. searching graphene/silicene for an analogue
+    lambda_R1 <-> lambda_R2 exchange, 108 points
+    min |P_z(l1,l2) + P_z(l2,l1)| : 0.019022929491970614
+  PASS  no lambda_R1 <-> lambda_R2 mirror exists
+
+ 4. graphene vs silicene with leads, phase omitted and restored
+    (closed ring: J_s was blind to lambda_R2 at half filling, N=2 mod 4)
+    phi      w      dT(no ph)   dT(ph)    dPz(no ph)  dPz(ph)
+    0.125  -0.8  0.11130424194024124  0.20876772761595985  0.14270448793899204  0.192055094167223
+    0.125  -0.2  0.0008831765384504919  0.0004822484277129252  0.02221334923513  0.050662881905150725
+    0.125  0.3  0.0065250083816546095  0.007521634505914698  0.0696317675157092  0.09555541117604165
+    0.125  0.9  0.09566930595590509  0.08695946697298344  0.5689453515837404  0.8478346522152558
+    0.25  -0.8  0.003391503702598865  0.0013930649435718243  0.024538078001681896  0.33783156378515505
+    0.25  -0.2  0.004178736479692358  0.002955741869295578  0.05198977298053624  0.1348301767912118
+    0.25  0.3  0.04553949670070173  0.07694293168551561  0.2360269150108012  0.33516413396857564
+    0.25  0.9  0.003053119198235351  0.0026947742698709438  0.2733767868967909  0.4617580237339731
+    0.4  -0.8  0.00014969194049683544  0.00004529028711244441  0.2730241097466219  0.6159289946105069
+    0.4  -0.2  0.16046723599758939  0.7091041906361868  0.14062086690858747  0.25621565912392863
+    0.4  0.3  0.2260982921879286  0.13251991520136835  0.7040105820456694  0.7145356516726495
+    0.4  0.9  0.0001591363228899132  0.00015403690948628194  0.5167598863993128  0.21265088768664475
+
+    worst-case blindness to lambda_R2, phase omitted:
+      min over points of dT  : 0.00014969194049683544
+      min over points of dPz : 0.02221334923513
+  PASS  with leads, lambda_R2 acts on the charge transmission even without its phase
+
+  5 passed, 0 failed

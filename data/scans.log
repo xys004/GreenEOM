@@ -1,0 +1,30 @@
+==============================================
+ BARRIDO A: dependencia de J_s en lambda_R2
+==============================================
+  puntos de contexto (N,phi,llenado,lEO,lR1): 324
+  en cada uno se barre lR2 en {0,0.05,...,0.30}: 2268 evaluaciones
+
+  SIN fase de Peierls (el modelo tal como esta escrito):
+     max sobre toda la rejilla de |J_s(lR2)-J_s(0)| = 3.7705181938978427
+     contextos con variacion > 1e-10 : 272 de 324
+  CON fase de Peierls:
+     max = 3.8687072773662123   contextos con variacion > 1e-10 : 324 de 324
+  contextos con independencia exacta sin la fase: 52
+     (N,llenado-N) presentes: {{{6, 0}, 27}, {{10, 0}, 25}}
+  PASS  sin la fase hay contextos con independencia exacta
+  PASS  con la fase no queda ninguno
+  PASS  con la fase, si depende en al menos parte de la rejilla
+  fraccion de contextos donde la fase hace diferencia: 1.
+
+==============================================
+ BARRIDO B: ¿existe un locus J_s = 0?
+==============================================
+  puntos con acoplos NO nulos: 324
+  |J_s| < 1e-9 en 0 puntos de 324
+  J_s > 0 en 324   J_s < 0 en 0
+  min |J_s| no nulo = 0.003948369993622691
+  con lR1 = lR2 impuesto (81 puntos): min |J_s| = 0.004574309685700939
+  PASS  lR1 = lR2 no anula J_s en ningun punto
+  PASS  no hay locus de J_s = 0 con acoplos no nulos
+
+  PASSED: 5   FAILED: 0
