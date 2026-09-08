@@ -346,5 +346,12 @@ que sobreviva el viaje PowerShell → ssh → shell remota sin mutilarse.
   T = T_1 x exp(-i sz pi/N), momentos semienteros, y las tres propiedades de
   los bloques; 7/7) y `exact_symmetry.py` (la conmutacion [T,H]=[T,V]=0 en
   SymPy EXACTO con acoplos simbolicos, no muestreo; corrida tambien en Astrum)
+- `formal/` — la regla de seleccion demostrada, no muestreada. El paso
+  aritmetico del argumento (la escalera semientera contiene k = +-pi/2 si y
+  solo si N = 2 mod 4) y el colapso trigonometrico que la fase restaurada
+  produce, probados dos veces con herramientas independientes: `z3` y Lean 4
+  con mathlib, sin `sorry`. Ver `formal/README.md`, que dice tambien lo que
+  NO se prueba ahi: la identidad de norma de bloque, que es algebra lineal y
+  se comprueba numericamente en `checks/js_definition_and_pi2.py`
 - `data/` — CSVs exportados y logs depositados
 - `build_job.sh` — empaquetador para el bridge

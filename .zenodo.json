@@ -1,6 +1,7 @@
 {
   "title": "GreenEOM: symbolic equation-of-motion Green functions for spin-orbit-coupled rings",
-  "description": "Symbolic generator for double-time (Zubarev) Green functions and their equations of motion, with a steady-state Keldysh layer, applied to spin-orbit-coupled mesoscopic rings. The equations are generated from the Hamiltonian rather than transcribed, which makes hermiticity, gauge covariance and the support of each equation mechanically testable. Includes an independent second implementation in Python of the central quantitative results, and the deposited logs of the calculations reported in the accompanying paper.",
+  "version": "v1.1",
+  "description": "Symbolic generator for double-time (Zubarev) Green functions and their equations of motion, with a steady-state Keldysh layer, applied to spin-orbit-coupled mesoscopic rings. The equations are generated from the Hamiltonian rather than transcribed, which makes hermiticity, gauge covariance and the support of each equation mechanically testable. Includes an independent second implementation in Python of the central quantitative results, and the deposited logs of the calculations reported in the accompanying paper. This version adds formal/, a machine-checked proof of the arithmetic and trigonometric core of the selection rule reported in the paper: that the half-integer momentum ladder of the generalised translation contains k = +-pi/2, and hence that the phaseless second-neighbour coupling drops out of the persistent spin current, if and only if N = 2 (mod 4); and that restoring the Peierls phase destroys that zero. The statement is proved twice by independent tools, in Z3 and in Lean 4 with mathlib, and the Lean proofs are free of sorry.",
   "upload_type": "software",
   "license": "MIT",
   "creators": [
@@ -32,7 +33,11 @@
     "mesoscopic rings",
     "persistent currents",
     "Keldysh",
-    "computer algebra"
+    "computer algebra",
+    "formal verification",
+    "Lean 4",
+    "mathlib",
+    "SMT solver"
   ],
   "access_right": "open"
 }
