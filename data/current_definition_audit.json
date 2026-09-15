@@ -1,0 +1,69 @@
+{
+  "method": "Analytic derivatives of every directed hopping term; occupied projector from famH.",
+  "convention": "t=hbar=1; all_bond_raw=-2*N*<conventional spin current>",
+  "cases": [
+    {
+      "N": 8,
+      "Ne": 8,
+      "rho": 0,
+      "e": 0.039,
+      "r": 0.12,
+      "lam": 0.15,
+      "flux_fraction": 0.25,
+      "spin_flux": 0.07954065125835597,
+      "flux_anticommutator": 0.07954065125835591,
+      "all_bond_raw": 0.08124348910742774,
+      "missing_intrinsic": 0.001702837849071933,
+      "relative_difference": 0.021408397116850136,
+      "hamiltonian_residual": 0.0,
+      "fermi_gap": 0.7468942362569512,
+      "finite_difference_derivative_errors": [
+        9.446306177032606e-09,
+        8.52676193277653e-11,
+        5.311350932833305e-11
+      ]
+    },
+    {
+      "N": 8,
+      "Ne": 8,
+      "rho": 1,
+      "e": 0.039,
+      "r": 0.12,
+      "lam": 0.15,
+      "flux_fraction": 0.25,
+      "spin_flux": 0.054841911440084934,
+      "flux_anticommutator": 0.05484191144008499,
+      "all_bond_raw": 0.05484191144008499,
+      "missing_intrinsic": 0.0,
+      "relative_difference": 1.0122030719498908e-15,
+      "hamiltonian_residual": 0.0,
+      "fermi_gap": 0.7343706107235655,
+      "finite_difference_derivative_errors": [
+        1.11084954326541e-08,
+        1.0304042627823926e-10,
+        5.564288109176003e-11
+      ]
+    },
+    {
+      "N": 10,
+      "Ne": 10,
+      "rho": 0,
+      "e": 0.039,
+      "r": 0.12,
+      "lam": 0.15,
+      "flux_fraction": 0.25,
+      "spin_flux": 0.06888452530405414,
+      "flux_anticommutator": 0.06888452530405431,
+      "all_bond_raw": 0.0688845253040542,
+      "missing_intrinsic": -2.1575785282333618e-16,
+      "relative_difference": 8.058580789550822e-16,
+      "hamiltonian_residual": 0.0,
+      "fermi_gap": 0.5679118752435653,
+      "finite_difference_derivative_errors": [
+        1.055978854210529e-08,
+        9.839361080885988e-11,
+        3.02014793528357e-10
+      ]
+    }
+  ]
+}

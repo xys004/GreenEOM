@@ -1,0 +1,24 @@
+==========================================================================
+ Three levels at one parameter point, N = N_e = 10, phaseless
+ e/t = 0.039, r/t = 0.12, Phi/Phi_0 = 1/4, lambda in [0, 0.3] t
+==========================================================================
+
+ level 1   the occupied state is common
+   max_lambda || P(lambda) - P(0) ||_F      = 6.565e-15
+   max_lambda | E_occ(lambda) - E_occ(0) |  = 1.066e-14 t
+   smallest Fermi gap on the grid           = 0.4677411 t
+
+ level 2   the spectrum is not
+   max shift of an occupied level           = 0.078455 t
+   max shift of an empty level              = 0.126432 t
+   max shift of an excitation energy        = 0.201486 t
+
+   The excitation spectrum moves by 0.201 t while the occupied
+   projector moves by 6.6e-15. The two differ by 3.1e+13 in magnitude.
+
+ why both can be true at once
+   occupied levels at lambda = 0     : -1.9803 -1.9769 -1.8268 -1.7434 -1.4611 -1.3722 -0.9423 -0.8774 -0.3472 -0.2802
+   occupied levels at lambda = 0.3 t : -2.0554 -1.9992 -1.8603 -1.6649 -1.4781 -1.3533 -0.9423 -0.8439 -0.3472 -0.2632
+   their sums                        : -12.8077063750  vs  -12.8077063750
+   Individual levels move; the sum, the projector and hence every
+   equal-time observable of the occupied state do not.

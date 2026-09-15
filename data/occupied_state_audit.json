@@ -1,0 +1,296 @@
+{
+  "versions": {
+    "numpy": "2.5.1",
+    "sympy": "1.14.0",
+    "z3": "4.16.0"
+  },
+  "symbolic": {
+    "rashba_bond_range_1": true,
+    "rashba_bond_range_2": true,
+    "rashba_bond_range_4": true,
+    "frobenius_norm_squared_pei_0": true,
+    "spin_flip_orthogonality_pei_0": true,
+    "zero_V_at_pi2_for_all_spin_flux": true,
+    "frobenius_norm_squared_pei_1": true,
+    "spin_flip_orthogonality_pei_1": true,
+    "spectral_projector_idempotency": true
+  },
+  "block_reduction_max_residual": 7.0791406528103225e-15,
+  "projectors": [
+    {
+      "N": 6,
+      "flux": 0.25,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "pei": 0,
+      "max_projector_change": 4.965722056744898e-15,
+      "max_ground_energy_change": 6.217248937900877e-15,
+      "min_gap": 0.9331684394797708,
+      "max_spectral_change": 0.13120262125004611,
+      "split_k_over_pi": [
+        0.5,
+        1.5
+      ]
+    },
+    {
+      "N": 6,
+      "flux": 0.25,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "pei": 1,
+      "max_projector_change": 0.15174975959269613,
+      "max_ground_energy_change": 0.023020552503338898,
+      "min_gap": 0.9037182597658721,
+      "max_spectral_change": 0.09263967692221953,
+      "split_k_over_pi": [
+        0.5,
+        1.5
+      ]
+    },
+    {
+      "N": 10,
+      "flux": 0.25,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "pei": 0,
+      "max_projector_change": 6.541515696018506e-15,
+      "max_ground_energy_change": 7.105427357601002e-15,
+      "min_gap": 0.4677411001714673,
+      "max_spectral_change": 0.12643249541406854,
+      "split_k_over_pi": [
+        0.5,
+        1.5
+      ]
+    },
+    {
+      "N": 10,
+      "flux": 0.25,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "pei": 1,
+      "max_projector_change": 0.14516547821109613,
+      "max_ground_energy_change": 0.01378863142789477,
+      "min_gap": 0.5042153851815756,
+      "max_spectral_change": 0.11046423158987895,
+      "split_k_over_pi": [
+        0.5,
+        1.5
+      ]
+    },
+    {
+      "N": 14,
+      "flux": 0.25,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "pei": 0,
+      "max_projector_change": 7.890374569851643e-15,
+      "max_ground_energy_change": 7.105427357601002e-15,
+      "min_gap": 0.29980441409660596,
+      "max_spectral_change": 0.1488689986869296,
+      "split_k_over_pi": [
+        0.5,
+        1.5
+      ]
+    },
+    {
+      "N": 14,
+      "flux": 0.25,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "pei": 1,
+      "max_projector_change": 0.13969522522417738,
+      "max_ground_energy_change": 0.009596777393589662,
+      "min_gap": 0.34118423763319217,
+      "max_spectral_change": 0.14163770467556114,
+      "split_k_over_pi": [
+        0.5,
+        1.5
+      ]
+    },
+    {
+      "N": 10,
+      "flux": 0.4,
+      "lEO": 0.2,
+      "lR1": 0.3,
+      "pei": 0,
+      "max_projector_change": 1.4142135623730967,
+      "max_ground_energy_change": 0.03196879871358149,
+      "min_gap": 0.002515324450838384,
+      "max_spectral_change": 0.149251248456292,
+      "split_k_over_pi": [
+        0.5,
+        0.7,
+        1.5,
+        1.7
+      ]
+    },
+    {
+      "N": 10,
+      "flux": 0.4,
+      "lEO": 0.2,
+      "lR1": 0.3,
+      "pei": 1,
+      "max_projector_change": 0.1898074927647544,
+      "max_ground_energy_change": 0.03809589529865143,
+      "min_gap": 0.04048452597184692,
+      "max_spectral_change": 0.17323754801043711,
+      "split_k_over_pi": [
+        0.5,
+        1.5
+      ]
+    },
+    {
+      "N": 8,
+      "flux": 0.25,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "pei": 0,
+      "max_projector_change": 0.2681431655980964,
+      "max_ground_energy_change": 0.05836531270836787,
+      "min_gap": 0.6964363494276523,
+      "max_spectral_change": 0.13369034894969034,
+      "split_k_over_pi": [
+        0.625,
+        1.625
+      ]
+    },
+    {
+      "N": 8,
+      "flux": 0.25,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "pei": 1,
+      "max_projector_change": 0.14801257363210593,
+      "max_ground_energy_change": 0.01732089264730874,
+      "min_gap": 0.6500704887859794,
+      "max_spectral_change": 0.09571952106900583,
+      "split_k_over_pi": [
+        0.625,
+        1.625
+      ]
+    },
+    {
+      "N": 8,
+      "flux": 0.0,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "pei": 0,
+      "max_projector_change": 0.40118157486798156,
+      "max_ground_energy_change": 0.12363499064019834,
+      "min_gap": 0.017289561764066343,
+      "max_spectral_change": 0.09872329767511312,
+      "split_k_over_pi": [
+        0.375,
+        0.625,
+        1.375,
+        1.625
+      ]
+    },
+    {
+      "N": 8,
+      "flux": 0.0,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "pei": 1,
+      "max_projector_change": 0.40118157486798156,
+      "max_ground_energy_change": 0.12363499064019834,
+      "min_gap": 0.017289561764066343,
+      "max_spectral_change": 0.09872329767511312,
+      "split_k_over_pi": [
+        0.375,
+        0.625,
+        1.375,
+        1.625
+      ]
+    }
+  ],
+  "finite_temperature": [
+    {
+      "beta_t": 100.0,
+      "density_matrix_change": 9.836987904782331e-11
+    },
+    {
+      "beta_t": 20.0,
+      "density_matrix_change": 0.009973657321131918
+    },
+    {
+      "beta_t": 5.0,
+      "density_matrix_change": 0.129421362244556
+    }
+  ],
+  "z3": {
+    "occupation_0": "unsat",
+    "occupation_1": "unsat",
+    "occupation_2": "unsat",
+    "PT_does_not_imply_real_spectrum": "unsat",
+    "mixed_derivative_counterexample": "lam"
+  },
+  "transport_validation": "==========================================================================\n (1) Python transport vs the deposited Wolfram output\n==========================================================================\n     N=6, Gamma=0.3t, phi/phi0=1/4, over 1001 injection energies\n       gra    worst |Python - Wolfram| = 7.772e-15\n       sil    worst |Python - Wolfram| = 8.216e-15\n       silNP  worst |Python - Wolfram| = 9.548e-15\n     AGREE to better than 1e-9, the sweep below is usable\n",
+  "transport_paths": [
+    {
+      "lEO": 0.0032,
+      "lR2": 0.0024,
+      "max_dT": 0.014091469138269419,
+      "max_dP": 0.03718889053660708,
+      "omega_dT": -0.5206249999999999,
+      "omega_dP": -1.9840625,
+      "threshold": 0.19999749934820904
+    },
+    {
+      "lEO": 0.0013333333333333335,
+      "lR2": 0.001,
+      "max_dT": 0.005104338679361664,
+      "max_dP": 0.015494021536848063,
+      "omega_dT": -0.5209375,
+      "omega_dP": -1.9840625,
+      "threshold": 0.1999223166130102
+    },
+    {
+      "lEO": 0.00013333333333333337,
+      "lR2": 0.0001,
+      "max_dT": 0.00045953479672444786,
+      "max_dP": 0.001548960614783837,
+      "omega_dT": -0.52125,
+      "omega_dP": -1.9840625,
+      "threshold": 0.19980465322550073
+    }
+  ],
+  "transport_axis_controls": [
+    {
+      "lEO": 0.0032,
+      "lR2": 0.0,
+      "max_dT": 0.014514782439090768,
+      "max_dP": 0.03897723632370235,
+      "omega_dT": -0.5184374999999999,
+      "omega_dP": 1.9840625000000003,
+      "threshold": 0.1999994927112465
+    },
+    {
+      "lEO": 0.0,
+      "lR2": 0.0024,
+      "max_dT": 0.003675028234723987,
+      "max_dP": 0.0018289279911509748,
+      "omega_dT": 1.3893750000000002,
+      "omega_dP": 1.9834375,
+      "threshold": 0.19980698685089845
+    },
+    {
+      "lEO": 0.0032,
+      "lR2": 0.0024,
+      "max_dT": 0.014091469138269419,
+      "max_dP": 0.03718889053660708,
+      "omega_dT": -0.5206249999999999,
+      "omega_dP": -1.9840625,
+      "threshold": 0.19999749934820904
+    },
+    {
+      "lEO": 0.0024374999999999996,
+      "lR2": 0.00043749999999999995,
+      "max_dT": 0.010344837155244146,
+      "max_dP": 0.029356753154237206,
+      "omega_dT": -0.5190625,
+      "omega_dP": 1.9840625000000003,
+      "threshold": 0.19998615079477045
+    }
+  ]
+}

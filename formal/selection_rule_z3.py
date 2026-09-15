@@ -1,26 +1,9 @@
-"""Z3 audit of the selection rule that carries the paper's central claim.
-
-The paper argues:
-
-  (i)   the generalised translation T = T_1 (x) exp(-i sigma_z pi/N) obeys
-        T^N = -1, so its eigenvalues sit on the HALF-INTEGER ladder
-        k = pi(2l+1)/N,  l = 0..N-1;
-  (ii)  with the Peierls phase OMITTED on the range-two hops,
-        ||V(k)|| = sqrt(2)|sin 2k|, which vanishes exactly at k = +-pi/2;
-  (iii) therefore the persistent spin current loses its lambda_R2 dependence
-        exactly when the ladder CONTAINS k = +-pi/2, and the paper states
-        that this happens iff N = 2 (mod 4);
-  (iv)  restoring the phase shifts the argument to 2k - 2phi and moves the
-        zero off k = +-pi/2, so the corrected model does respond.
-
-Steps (i), (ii) and (iv) are linear algebra and trigonometry, checked
-numerically in checks/js_definition_and_pi2.py.  Step (iii) is an ARITHMETIC
-claim about N, and it is the one the paper's condition "N = 2 (mod 4)" rests
-on.  Arithmetic over the integers is exactly what an SMT solver settles, so we
-prove it here rather than sampling it.
-
-Everything below is proved by refutation: we assert the NEGATION of each claim
-and require z3 to report unsat.
+"""Arithmetic certificates for the half-integer momentum ladder.
+The two special rungs occur iff N = 2 mod 4. This is not a classification
+of all current zeros. The physical block and occupation hypotheses are
+proved separately in manuscript Sec. III; see formal/README.md.
+Universal implications are checked by refutation; existence claims are
+checked directly for satisfiability, and the four stated sizes are evaluated.
 """
 from z3 import (Int, Solver, ForAll, Exists, Implies, And, Or, Not, sat, unsat,
                 get_version_string)
@@ -105,7 +88,7 @@ print(f"  [{'PASS' if ok else 'FAIL'}]  even rings both satisfying and violating
 #           the paper leans on it when it says the blocks come in +-k pairs.)
 # ---------------------------------------------------------------------------
 print()
-print("Claim 4  no rung of the ladder is an integer multiple of pi")
+print("Claim 4  for even N, no rung is an integer multiple of pi")
 prove(
     "  N>0 :  never  pi(2l+1)/N = pi*m,  i.e. 2l+1 = N*m has no solution "
     "for even N",
@@ -138,8 +121,8 @@ for n, should in expect.items():
     good = (got == should)
     allok &= good
     print(f"  [{'PASS' if good else 'FAIL'}]  N={n:2d}: rule says "
-          f"{'independent' if got else 'responds':11s} , paper says "
-          f"{'independent' if should else 'responds'}")
+          f"{'zeros present' if got else 'zeros absent':11s} , paper says "
+          f"{'zeros present' if should else 'zeros absent'}")
 results.append(("  quoted ring sizes agree with the rule", allok, None))
 
 print()
@@ -147,3 +130,5 @@ print("=" * 74)
 npass = sum(1 for _, ok, _ in results if ok)
 print(f" {npass}/{len(results)} claims discharged")
 print("=" * 74)
+
+assert npass == len(results), "An arithmetic certificate failed"

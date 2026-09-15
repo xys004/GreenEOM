@@ -1,0 +1,507 @@
+{
+  "parameters": {
+    "N": 10,
+    "Ne": 10,
+    "e": 0.039,
+    "r": 0.12,
+    "flux_fraction": 0.25,
+    "rho": 0,
+    "gamma": 0.3,
+    "omega": 0.3,
+    "eta": 1e-08
+  },
+  "status": "Numerical illustration of the analytically proved common state, not its proof.",
+  "max_projector_residual": 6.565200015047697e-15,
+  "max_energy_residual": 1.0658141036401503e-14,
+  "min_fermi_gap": 0.4677411001714673,
+  "rows": [
+    {
+      "lam": 0.0,
+      "projector_residual": 0.0,
+      "energy_residual": 0.0,
+      "gap": 0.58152894391273,
+      "transmission": 1.6464999096723498,
+      "polarization": 0.21068067076673966
+    },
+    {
+      "lam": 0.005,
+      "projector_residual": 5.118985520086301e-15,
+      "energy_residual": 0.0,
+      "gap": 0.5823715121539488,
+      "transmission": 1.6643062151510821,
+      "polarization": 0.1978786192874863
+    },
+    {
+      "lam": 0.01,
+      "projector_residual": 4.244858307150419e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5831768797707826,
+      "transmission": 1.683171582333459,
+      "polarization": 0.1845846969851212
+    },
+    {
+      "lam": 0.015,
+      "projector_residual": 6.328883138710144e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5839448939117624,
+      "transmission": 1.703084160387489,
+      "polarization": 0.17084524689635852
+    },
+    {
+      "lam": 0.02,
+      "projector_residual": 4.95425693874586e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5846754080338115,
+      "transmission": 1.7240105312219178,
+      "polarization": 0.15671971610391497
+    },
+    {
+      "lam": 0.025,
+      "projector_residual": 5.582993547811353e-15,
+      "energy_residual": 0.0,
+      "gap": 0.585368282037023,
+      "transmission": 1.7458892347922985,
+      "polarization": 0.14228282155302155
+    },
+    {
+      "lam": 0.03,
+      "projector_residual": 5.577738960334043e-15,
+      "energy_residual": 5.329070518200751e-15,
+      "gap": 0.5860233823946381,
+      "transmission": 1.768623099611943,
+      "polarization": 0.12762685037670293
+    },
+    {
+      "lam": 0.035,
+      "projector_residual": 6.261943389604641e-15,
+      "energy_residual": 5.329070518200751e-15,
+      "gap": 0.5866405822779863,
+      "transmission": 1.7920703980406827,
+      "polarization": 0.11286402630603157
+    },
+    {
+      "lam": 0.04,
+      "projector_residual": 6.091184039546443e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.587219761676046,
+      "transmission": 1.8160349972805983,
+      "polarization": 0.09812883860414952
+    },
+    {
+      "lam": 0.045,
+      "projector_residual": 5.778734164100859e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.587760807509428,
+      "transmission": 1.8402559085458312,
+      "polarization": 0.08358018709949346
+    },
+    {
+      "lam": 0.05,
+      "projector_residual": 4.870800974137424e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5882636137385276,
+      "transmission": 1.8643969643761396,
+      "polarization": 0.06940314733401548
+    },
+    {
+      "lam": 0.055,
+      "projector_residual": 5.5268890522425126e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.58872808146561,
+      "transmission": 1.888037781266729,
+      "polarization": 0.05581010636961611
+    },
+    {
+      "lam": 0.06,
+      "projector_residual": 5.8394930492861905e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5891541190305667,
+      "transmission": 1.910667669653944,
+      "polarization": 0.04304096763773913
+    },
+    {
+      "lam": 0.065,
+      "projector_residual": 5.038231397989292e-15,
+      "energy_residual": 0.0,
+      "gap": 0.5895416421001816,
+      "transmission": 1.931684669923436,
+      "polarization": 0.031362080656454745
+    },
+    {
+      "lam": 0.07,
+      "projector_residual": 5.4211181495253924e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5898905737506766,
+      "transmission": 1.9504022935112808,
+      "polarization": 0.02106353010759755
+    },
+    {
+      "lam": 0.075,
+      "projector_residual": 5.154056745455479e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5902008445433762,
+      "transmission": 1.96606663404965,
+      "polarization": 0.012454433249051414
+    },
+    {
+      "lam": 0.08,
+      "projector_residual": 4.7885336840213035e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.590472392593262,
+      "transmission": 1.9778860346164815,
+      "polarization": 0.005855960960266724
+    },
+    {
+      "lam": 0.085,
+      "projector_residual": 5.639640899767169e-15,
+      "energy_residual": 0.0,
+      "gap": 0.5907051636303393,
+      "transmission": 1.9850742152647949,
+      "polarization": 0.0015919303433573524
+    },
+    {
+      "lam": 0.09,
+      "projector_residual": 5.499977874822069e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5908948223226769,
+      "transmission": 1.9869055724120277,
+      "polarization": -2.297597391521125e-05
+    },
+    {
+      "lam": 0.095,
+      "projector_residual": 5.0254687031769356e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5893828980694198,
+      "transmission": 1.982778432489047,
+      "polarization": 0.0013029695648535695
+    },
+    {
+      "lam": 0.1,
+      "projector_residual": 5.868077586462702e-15,
+      "energy_residual": 7.105427357601002e-15,
+      "gap": 0.5877965655564605,
+      "transmission": 1.9722789477577944,
+      "polarization": 0.005823340685995673
+    },
+    {
+      "lam": 0.105,
+      "projector_residual": 5.157185362288318e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5861361252257538,
+      "transmission": 1.955236003667061,
+      "polarization": 0.013737979115213777
+    },
+    {
+      "lam": 0.11,
+      "projector_residual": 4.565681061327583e-15,
+      "energy_residual": 0.0,
+      "gap": 0.5844018879750207,
+      "transmission": 1.9317570201347953,
+      "polarization": 0.025178321417210287
+    },
+    {
+      "lam": 0.115,
+      "projector_residual": 6.565200015047697e-15,
+      "energy_residual": 7.105427357601002e-15,
+      "gap": 0.5825941749297684,
+      "transmission": 1.9022365862254322,
+      "polarization": 0.04019507987621195
+    },
+    {
+      "lam": 0.12,
+      "projector_residual": 5.050704289571524e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5807133172116932,
+      "transmission": 1.867334375228105,
+      "polarization": 0.05874970644847102
+    },
+    {
+      "lam": 0.125,
+      "projector_residual": 5.496973745280051e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5787596557036179,
+      "transmission": 1.8279246740928436,
+      "polarization": 0.08071082663479195
+    },
+    {
+      "lam": 0.13,
+      "projector_residual": 4.741171839200823e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5767335408113397,
+      "transmission": 1.7850253964324572,
+      "polarization": 0.10585637165893517
+    },
+    {
+      "lam": 0.135,
+      "projector_residual": 5.96776112994231e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5746353322224824,
+      "transmission": 1.7397179502610296,
+      "polarization": 0.13388151975718204
+    },
+    {
+      "lam": 0.14,
+      "projector_residual": 5.429370019957825e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5724653986627216,
+      "transmission": 1.693069890539712,
+      "polarization": 0.16441188176152313
+    },
+    {
+      "lam": 0.145,
+      "projector_residual": 5.215162441198887e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5702241176495032,
+      "transmission": 1.6460700890918545,
+      "polarization": 0.19702075490757012
+    },
+    {
+      "lam": 0.15,
+      "projector_residual": 5.7199683611520336e-15,
+      "energy_residual": 0.0,
+      "gap": 0.5679118752435653,
+      "transmission": 1.5995822631831593,
+      "polarization": 0.23124883422633624
+    },
+    {
+      "lam": 0.155,
+      "projector_residual": 5.2554342017635036e-15,
+      "energy_residual": 7.105427357601002e-15,
+      "gap": 0.5655290657984453,
+      "transmission": 1.5543184873645117,
+      "polarization": 0.26662458560730995
+    },
+    {
+      "lam": 0.16,
+      "projector_residual": 5.389061347946276e-15,
+      "energy_residual": 0.0,
+      "gap": 0.5630760917082192,
+      "transmission": 1.5108308809099453,
+      "polarization": 0.30268356433755716
+    },
+    {
+      "lam": 0.165,
+      "projector_residual": 5.6729319949412836e-15,
+      "energy_residual": 1.0658141036401503e-14,
+      "gap": 0.5605533631536641,
+      "transmission": 1.4695175695094098,
+      "polarization": 0.3389852669079359
+    },
+    {
+      "lam": 0.17,
+      "projector_residual": 5.40279996493271e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5579612978471676,
+      "transmission": 1.4306382756731497,
+      "polarization": 0.37512655157763053
+    },
+    {
+      "lam": 0.17500000000000002,
+      "projector_residual": 5.205288640269303e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5553003207764238,
+      "transmission": 1.394335166073678,
+      "polarization": 0.4107511593106739
+    },
+    {
+      "lam": 0.18,
+      "projector_residual": 5.919982146956234e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5525708639473449,
+      "transmission": 1.3606554348693933,
+      "polarization": 0.44555532554691635
+    },
+    {
+      "lam": 0.185,
+      "projector_residual": 5.31689158579935e-15,
+      "energy_residual": 5.329070518200751e-15,
+      "gap": 0.5497733661262341,
+      "transmission": 1.3295731444789154,
+      "polarization": 0.4792898351772353
+    },
+    {
+      "lam": 0.19,
+      "projector_residual": 4.901739682525114e-15,
+      "energy_residual": 0.0,
+      "gap": 0.5469082725815461,
+      "transmission": 1.3010088212294153,
+      "polarization": 0.511759110231826
+    },
+    {
+      "lam": 0.195,
+      "projector_residual": 5.464561722577967e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5439760348253935,
+      "transmission": 1.274846083581901,
+      "polarization": 0.5428180327989941
+    },
+    {
+      "lam": 0.2,
+      "projector_residual": 5.824758884733233e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5409771103550414,
+      "transmission": 1.250945131720113,
+      "polarization": 0.5723672148797078
+    },
+    {
+      "lam": 0.20500000000000002,
+      "projector_residual": 4.910589909823047e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5379119623945889,
+      "transmission": 1.2291532714025468,
+      "polarization": 0.6003473621079218
+    },
+    {
+      "lam": 0.21,
+      "projector_residual": 4.501878281699921e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5347810596370478,
+      "transmission": 1.2093128279094691,
+      "polarization": 0.6267332704048147
+    },
+    {
+      "lam": 0.215,
+      "projector_residual": 5.526079144262391e-15,
+      "energy_residual": 0.0,
+      "gap": 0.5315848759870346,
+      "transmission": 1.1912668766291736,
+      "polarization": 0.6515278700249184
+    },
+    {
+      "lam": 0.22,
+      "projector_residual": 6.279810179370897e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.5283238903042823,
+      "transmission": 1.1748632172425224,
+      "polarization": 0.6747566093463446
+    },
+    {
+      "lam": 0.225,
+      "projector_residual": 6.254235889546334e-15,
+      "energy_residual": 0.0,
+      "gap": 0.5249985861481834,
+      "transmission": 1.1599569800933032,
+      "polarization": 0.6964623630817484
+    },
+    {
+      "lam": 0.23,
+      "projector_residual": 5.268113303137314e-15,
+      "energy_residual": 7.105427357601002e-15,
+      "gap": 0.5216094515235243,
+      "transmission": 1.1464121976390584,
+      "polarization": 0.7167009620668754
+    },
+    {
+      "lam": 0.23500000000000001,
+      "projector_residual": 5.595740548266494e-15,
+      "energy_residual": 5.329070518200751e-15,
+      "gap": 0.5181569786276757,
+      "transmission": 1.1341026142047304,
+      "polarization": 0.735537375624971
+    },
+    {
+      "lam": 0.24,
+      "projector_residual": 5.3426623749050246e-15,
+      "energy_residual": 0.0,
+      "gap": 0.5146416635993802,
+      "transmission": 1.1229119510714918,
+      "polarization": 0.75304253107013
+    },
+    {
+      "lam": 0.245,
+      "projector_residual": 6.0980426530930245e-15,
+      "energy_residual": 5.329070518200751e-15,
+      "gap": 0.5110640062693778,
+      "transmission": 1.1127337947771845,
+      "polarization": 0.7692907250989519
+    },
+    {
+      "lam": 0.25,
+      "projector_residual": 5.976630657316174e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.507424509912997,
+      "transmission": 1.103471235531631,
+      "polarization": 0.7843575650478871
+    },
+    {
+      "lam": 0.255,
+      "projector_residual": 5.008111527875524e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.5037236810049663,
+      "transmission": 1.0950363496626725,
+      "polarization": 0.7983183708235815
+    },
+    {
+      "lam": 0.26,
+      "projector_residual": 5.095410210156948e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.49996202897658043,
+      "transmission": 1.087349594145586,
+      "polarization": 0.8112469677690449
+    },
+    {
+      "lam": 0.265,
+      "projector_residual": 5.51614627451365e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.4961400659754053,
+      "transmission": 1.0803391614216136,
+      "polarization": 0.8232148044195894
+    },
+    {
+      "lam": 0.27,
+      "projector_residual": 6.541515696018506e-15,
+      "energy_residual": 0.0,
+      "gap": 0.4922583066277165,
+      "transmission": 1.0739403277587038,
+      "polarization": 0.8342903352218961
+    },
+    {
+      "lam": 0.275,
+      "projector_residual": 5.5111154676633746e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.4883172678038221,
+      "transmission": 1.068094817326597,
+      "polarization": 0.844538615543784
+    },
+    {
+      "lam": 0.28,
+      "projector_residual": 5.064517045433575e-15,
+      "energy_residual": 5.329070518200751e-15,
+      "gap": 0.484317468386402,
+      "transmission": 1.0627501960786858,
+      "polarization": 0.8540210638171649
+    },
+    {
+      "lam": 0.28500000000000003,
+      "projector_residual": 5.378263302879758e-15,
+      "energy_residual": 5.329070518200751e-15,
+      "gap": 0.4802594290421006,
+      "transmission": 1.0578593037379889,
+      "polarization": 0.8627953528799094
+    },
+    {
+      "lam": 0.29,
+      "projector_residual": 5.577116728946562e-15,
+      "energy_residual": 0.0,
+      "gap": 0.4761436719964266,
+      "transmission": 1.053379728104128,
+      "polarization": 0.8709153991971138
+    },
+    {
+      "lam": 0.295,
+      "projector_residual": 5.572369271895772e-15,
+      "energy_residual": 3.552713678800501e-15,
+      "gap": 0.47197072081217456,
+      "transmission": 1.04927332308873,
+      "polarization": 0.8784314244956865
+    },
+    {
+      "lam": 0.3,
+      "projector_residual": 5.757871933911633e-15,
+      "energy_residual": 1.7763568394002505e-15,
+      "gap": 0.4677411001714673,
+      "transmission": 1.0455057700054908,
+      "polarization": 0.8853900693939109
+    }
+  ]
+}

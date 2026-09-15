@@ -1,24 +1,22 @@
 """Two questions a referee will ask, answered numerically.
 
-(1) The paper DERIVES the spin current as J_s = (1/2N){S, i[H,x]} (Sec. III C)
-    but every plotted number is computed as J_s^z = -dE/d(phi_s), a spin-flux
-    energy derivative.  Are the two the same object here?
-
-    By Hellmann-Feynman both are sums over occupied states of a one-body
-    operator, so we compare the operators directly:
-        flux route : dH/d(phi_s)
-        anticomm.  : (1/2){Sigma_z, dH/d(phi)}
-    They agree on every spin-DIAGONAL hop (there sigma_z just supplies the sign
-    s).  They differ on spin-FLIP hops, where {Sigma_z, .} kills the element
-    (s + (-s) = 0) while the spin flux does not.  The question is whether that
-    difference survives in the occupied expectation value.  It does not.
+(1) Compare two FLUX-BASED equilibrium expectation values:
+        spin-flux route: -Tr(P dH/d(phi_s))
+        flux anticommutator: -Tr(P {Sigma_z, dH/d(phi)}/2).
+    These are not a test of the conventional all-bond spin current.
+    In the phaseless model dH/d(phi) omits range-two hops, whereas the
+    oriented-bond velocity includes them. The old manuscript incorrectly
+    described the second quantity as the conventional bond current.
+    The two flux operators differ on spin-flip hops, but that difference
+    has zero equilibrium expectation in the clean block-diagonal model.
+    See current_definition_audit.py for an analytic three-way comparison.
 
 (2) The selection rule's crux: with no Peierls phase, V = dH/d(lambda_R2)
     vanishes IDENTICALLY on the k = +-pi/2 blocks of the generalised
     translation.  The paper asserts this.  Here we exhibit it AND identify the
     closed form that explains it:
 
-        || V restricted to the block at k ||  =  sqrt(2) |sin(2k - 2 phi)|
+        || V restricted to the block at k ||_F  =  sqrt(2) |sin(2k - 2 phi)|
 
     Phaseless (phi -> 0) this is sqrt(2)|sin 2k|, which vanishes at 2k = +-pi,
     i.e. exactly at k = +-pi/2 -- a momentum that the half-integer ladder
@@ -54,9 +52,9 @@ def js_two_ways(N, a, ph, pei):
 
 
 print("=" * 76)
-print(" (1) spin-flux derivative  vs  anticommutator definition of J_s^z")
+print(" (1) spin-flux derivative  vs  FLUX anticommutator (not all-bond current)")
 print("=" * 76)
-print("      N  phase  lEO    lR1    lR2    phi/phi0    -dE/dphi_s    anticomm."
+print("      N  phase  lEO    lR1    lR2    phi/phi0    -dE/dphi_s    flux-anticomm."
       "      diff")
 worst = 0.0
 for N in (6, 8, 10, 14):

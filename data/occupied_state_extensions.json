@@ -1,0 +1,58 @@
+{
+  "annihilator_certificate": {
+    "trace_PV": 1.7877173735226785e-16,
+    "empty_occupied_block_norm": 2.493847934130415e-15
+  },
+  "ranges": [
+    {
+      "range": 2,
+      "block_residual": 2.9780372410031702e-15,
+      "projector_change": 5.577738960334043e-15,
+      "trace_PV": 1.7877173735226785e-16,
+      "empty_occupied_block_norm": 2.493847934130415e-15
+    },
+    {
+      "range": 3,
+      "block_residual": 3.838701546988713e-15,
+      "projector_change": 0.04775927084523487,
+      "trace_PV": 0.3812089062498871,
+      "empty_occupied_block_norm": 1.388286672448413
+    },
+    {
+      "range": 4,
+      "block_residual": 4.421842333736313e-15,
+      "projector_change": 5.419407970222042e-15,
+      "trace_PV": 9.087067843991948e-17,
+      "empty_occupied_block_norm": 2.2349328466805527e-15
+    },
+    {
+      "range": 6,
+      "block_residual": 5.754020956602872e-15,
+      "projector_change": 4.988452987353004e-15,
+      "trace_PV": 9.087067843991951e-17,
+      "empty_occupied_block_norm": 2.219018901385448e-15
+    }
+  ],
+  "sufficient_fixed_mu_interval": {
+    "mu": -0.02292362483940645,
+    "lower": -0.5369420057780521,
+    "upper": 0.6327210047754905,
+    "status": "Analytic inequality evaluated in float64, sufficient, not claimed to be the maximal canonical interval."
+  },
+  "quenches": [
+    {
+      "final_r2": 0.3,
+      "time": 3.7,
+      "projector_evolution": 8.3835679558569e-15,
+      "final_ground_projector_difference": 5.757871933911633e-15,
+      "energy_above_final_ground": -5.329070518200751e-15
+    },
+    {
+      "final_r2": 2.0,
+      "time": 3.7,
+      "projector_evolution": 1.2001366410120342e-14,
+      "final_ground_projector_difference": 2.0000000000000004,
+      "energy_above_final_ground": 3.4496348709646973
+    }
+  ]
+}

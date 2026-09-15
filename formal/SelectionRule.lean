@@ -1,27 +1,10 @@
-/-
-Lean 4 + mathlib formalisation of the arithmetic and trigonometric core of the
-selection rule in "Hermiticity and covariance in equations of motion for
-spin-orbit-coupled rings".
-
-The physical chain is:
-
-  T = T_1 (x) exp(-i sigma_z pi/N)  obeys  T^N = -1,
-  so its eigenvalue phases form the half-integer ladder  k = pi(2l+1)/N;
-
-  with the Peierls phase OMITTED on the range-two hops,
-      ||V(k)|| = sqrt 2 * |sin 2k|,
-  which vanishes exactly at k = +-pi/2;
-
-  hence the persistent spin current loses its lambda_R2 dependence exactly
-  when the ladder CONTAINS k = +-pi/2  --  the paper's condition N = 2 (mod 4);
-
-  restoring the phase shifts the argument to 2k - 2phi, and at k = pi/2 the
-  norm becomes sqrt 2 * |sin 2phi|, which is non-zero for 0 < phi < pi/2, so
-  the corrected model responds.
-
-Four statements below are the exact content of that chain that is not linear
-algebra.  `ladder_pi_two` and `ladder_neg_pi_two` are the arithmetic; the
-`phaseless_*` and `restored_*` lemmas are the trigonometry.
+/- Arithmetic and trigonometric certificates for the common occupied state.
+The ladder contains pi/2 and 3pi/2 iff N = 2 mod 4. This does not classify
+all vanishing currents. The Frobenius block norm is sqrt(2)|sin(2q)|;
+the operator norm is |sin(2q)|. The block reduction and occupation hypotheses
+are supplied in manuscript Sec. III, not formalized in this file.
+Restoring a phase changes the zero at generic flux, without forcing every
+observable to respond at every parameter point. See README.md for scope.
 -/
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
 import Mathlib.Tactic

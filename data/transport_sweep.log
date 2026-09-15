@@ -1,0 +1,49 @@
+==========================================================================
+ (1) Python transport vs the deposited Wolfram output
+==========================================================================
+     N=6, Gamma=0.3t, phi/phi0=1/4, over 1001 injection energies
+       gra    worst |Python - Wolfram| = 7.772e-15
+       sil    worst |Python - Wolfram| = 8.216e-15
+       silNP  worst |Python - Wolfram| = 9.548e-15
+     AGREE to better than 1e-9, the sweep below is usable
+
+==========================================================================
+ (2a) separation between phaseless and restored, over Gamma, omega, N
+==========================================================================
+     lEO=0.2t, lR1=0.12t, lR2=0.15t, phi/phi0=1/4
+
+      N   Gamma      min|dT|     max|dT|     min|dPz|    max|dPz|
+      6   0.10    4.200e-05   1.295e+00   9.216e-04   1.418e+00
+      6   0.30    3.787e-04   1.324e+00   1.139e-03   1.416e+00
+      6   0.60    1.525e-03   1.098e+00   1.914e-03   1.410e+00
+      6   1.00    4.295e-03   6.940e-01   3.709e-03   1.397e+00
+      8   0.10    1.096e-04   8.965e-01   5.694e-04   1.551e+00
+      8   0.30    5.109e-04   1.657e+00   1.006e-03   1.317e+00
+      8   0.60    1.389e-03   1.121e+00   2.399e-03   1.011e+00
+      8   1.00    1.609e-04   6.593e-01   1.952e-03   9.545e-01
+     10   0.10    1.411e-04   9.711e-01   2.147e-03   1.710e+00
+     10   0.30    1.264e-03   8.357e-01   2.058e-04   1.251e+00
+     10   0.60    1.841e-03   6.374e-01   9.757e-04   1.086e+00
+     10   1.00    4.491e-04   5.119e-01   6.404e-04   1.074e+00
+
+==========================================================================
+ (2b) the separation as the coupling falls to its physical value
+==========================================================================
+     N=6, Gamma=0.3t, phi/phi0=1/4, lR1=0.12t, lEO scaled with lR2
+     silicene: lambda_SO ~ 3.9 meV against t ~ 1.6 eV, i.e. ~2.4e-3 t
+     polarisation taken where both models transmit >= 10% of the peak
+
+      lR2 (t)     peak T     max|dT|      max|dPz|     dPz/lR2
+      1.50e-01    1.9603     1.6030e+00   1.0131e+00      6.75
+      5.00e-02    1.9943     6.4031e-01   6.3729e-01     12.75
+      5.00e-03    1.9998     3.5986e-02   7.7402e-02     15.48
+      2.40e-03    2.0000     1.4091e-02   3.7189e-02     15.50
+      1.00e-03    1.9992     5.1043e-03   1.5494e-02     15.49
+      1.00e-04    1.9980     4.5953e-04   1.5490e-03     15.49
+
+     dPz/lR2 settles at 15.5 once lR2 <= 5e-3 t and holds to three
+     digits from there down, so the separation is linear across the
+     whole physical range; above 1e-2 t it saturates instead.
+     At the physical coupling the effect is of order one percent
+     rather than of order one, but it does not vanish, and its size
+     follows from the slope rather than from the parameter point.

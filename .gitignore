@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+figures/*.pdf
+figures/*.png
+figures/*.eps

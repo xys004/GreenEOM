@@ -1,0 +1,58 @@
+{
+  "range_one_angle_spectral_difference": {
+    "site": 1.7208456881689926e-15,
+    "average": 0.0017891864443735361
+  },
+  "spin_current_raw_convention": {
+    "flux_anticommutator": 0.06888452530444245,
+    "all_bonds_anticommutator": 0.06888452530444222,
+    "operator_difference_norm": 0.9802244640871377,
+    "note": "Both raw quantities use sigma_z, with no physical 1/(2N) factor. The extra probe weights EVERY directed bond by its range, even when the AB phase is omitted."
+  },
+  "spin_current_other_points": [
+    {
+      "N": 8,
+      "nf": 8,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "lR2": 0.15,
+      "flux_fraction": 0.25,
+      "flux": 0.07954065125845361,
+      "all_bonds": 0.08124348910752444
+    },
+    {
+      "N": 10,
+      "nf": 10,
+      "lEO": 0.2,
+      "lR1": 0.3,
+      "lR2": 0.3,
+      "flux_fraction": 0.4,
+      "flux": -2.910811007309013,
+      "all_bonds": -2.8208806330754888
+    },
+    {
+      "N": 10,
+      "nf": 8,
+      "lEO": 0.039,
+      "lR1": 0.12,
+      "lR2": 0.15,
+      "flux_fraction": 0.25,
+      "flux": 0.0376428916318618,
+      "all_bonds": 0.16376719765803344
+    }
+  ],
+  "ring_gauge_transform": {
+    "arbitrary_chi_correct_model": 1.4011715553617035,
+    "quantized_chi_correct_model": 7.912793901273852e-16,
+    "quantized_chi_phaseless_model": 0.5761614839282366
+  },
+  "PT_counterexample": {
+    "PT_residual": "Matrix([[0, 0], [0, 0]])",
+    "eigenvalues": [
+      "-sqrt(3)*I",
+      "sqrt(3)*I"
+    ]
+  },
+  "quadratic_closure_counterexample": "H=epsilon*c1dag*c1 on an N-site spinful ring: seed G(c1,c1dag) closes on 1 unknown; H is quadratic and periodic.",
+  "support_counterexample": "Changing H_12=t to exp(i*phi)*t with t nonzero changes a coefficient but not the support {G_2j}."
+}
