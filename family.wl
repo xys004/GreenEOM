@@ -1,15 +1,15 @@
 (* The three UCV rings, same method, different Hamiltonians:
 
-     Judith  (Maiti ring)   NN hopping + Rashba(alpha) + Dresselhaus(beta)
-     Emma    (graphene)     + Kane-Mele intrinsic SOC at SECOND neighbours
+     Rashba-Dresselhaus     NN hopping + Rashba(alpha) + Dresselhaus(beta)
+     graphene               + Kane-Mele intrinsic SOC at SECOND neighbours
                               (lambda_EO, with the chirality sign nu_n)
                             + Rashba lambda_R1 at first neighbours
-     Dayanna (silicene)     + intrinsic Rashba lambda_R2 at SECOND neighbours
+     silicene               + intrinsic Rashba lambda_R2 at SECOND neighbours
 
    All three are quadratic, so the engine handles all three unchanged: the only
-   thing that differs is the H you type. This script builds Emma's and
-   Dayanna's, checks hermiticity, and compares the machine-generated equation
-   of motion against the one printed in the thesis. Pure ASCII. *)
+   thing that differs is the H you type. This script builds the graphene and
+   silicene rings, checks hermiticity, and compares the machine-generated equation
+   of motion against the reference form. Pure ASCII. *)
 
 $pass = 0; $fail = 0;
 checkTrue[name_String, v_] :=
@@ -31,7 +31,7 @@ nx2[n_] := Mod[n + 1, ns] + 1;
    their convention; the two are not equivalent (spectra differ by up to
    0.28 t) and that difference is the point of Sec. IV C. *)
 nu[n_] := (-1)^(n - 1);
-th[n_] := 2 Pi (n - 1)/ns;       (* bond angle, thesis convention *)
+th[n_] := 2 Pi (n - 1)/ns;       (* bond angle, reference convention *)
 sz[s_] := s/2;                   (* S_z eigenvalue, hbar = 1 *)
 
 (* Hermitian conjugate of a quadratic operator expression. Hand-signing the
@@ -79,8 +79,8 @@ hE[lr2_] := herm[hElit[lr2]];
 
 ops = Flatten[Table[Ann[c, {n, s}], {n, ns}, {s, {1, -1}}]];
 
-hGraphene = hA[t0] + hB[tt, ph] + hC[lEO] + hD[lR1];              (* Emma *)
-hSilicene = hA[t0] + hB[tt, ph] + hC[lEO] + hD[lR1] + hE[lR2];    (* Dayanna *)
+hGraphene = hA[t0] + hB[tt, ph] + hC[lEO] + hD[lR1];          (* graphene *)
+hSilicene = hA[t0] + hB[tt, ph] + hC[lEO] + hD[lR1] + hE[lR2];   (* silicene *)
 
 Print["=============================================="];
 Print[" 1. hermiticity"];
@@ -104,9 +104,9 @@ Module[{m},
 
 Print[""];
 Print["=============================================="];
-Print[" 2. the equation of motion, machine vs thesis"];
+Print[" 2. the equation of motion, machine vs reference"];
 Print["=============================================="];
-Print["  Emma's thesis (p. 53, after eq. 4.17) writes the EOM for"];
+Print["  The reference calculation writes the EOM for"];
 Print["  G_{n+1 s, n s} with these Green functions on the right:"];
 Print["      c_{n+1,s}   c_{n+2,s}   c_{n,s}   c_{n+3,s}"];
 Print["      c_{n,-s}    c_{n+2,-s}"];
@@ -121,13 +121,13 @@ Module[{n0 = 3, sg = 1, cm, appear, expected, extra, missing, fmt},
   Print["      ", StringRiffle[fmt /@ appear, "  "]];
   expected = Sort[{{nxt[n0], sg}, {nx2[n0], sg}, {n0, sg},
                    {nxt[nx2[n0]], sg}, {n0, -sg}, {nx2[n0], -sg}}];
-  Print["  thesis list, same labels:"];
+  Print["  reference list, same labels:"];
   Print["      ", StringRiffle[fmt /@ expected, "  "]];
   extra = Complement[appear, expected];
   missing = Complement[expected, appear];
-  Print["  in machine but not in thesis: ", If[extra === {}, "none", fmt /@ extra]];
-  Print["  in thesis but not in machine: ", If[missing === {}, "none", fmt /@ missing]];
-  checkTrue["every Green function of the thesis is produced by the engine",
+  Print["  in machine but not in reference: ", If[extra === {}, "none", fmt /@ extra]];
+  Print["  in reference but not in machine: ", If[missing === {}, "none", fmt /@ missing]];
+  checkTrue["every Green function of the reference is produced by the engine",
     missing === {}];
   checkTrue["the engine finds ONE extra: the backward second-neighbour hop",
     Length[extra] === 1 && First[extra] === {Mod[nxt[n0] - 2, ns, 1], sg}];
@@ -143,7 +143,7 @@ Module[{n0 = 3, sg = 1, cm, appear, expected, extra},
                    {nxt[nx2[n0]], sg}, {n0, -sg}, {nx2[n0], -sg}}];
   extra = Complement[appear, expected];
   Print["    extra terms: ", If[extra === {}, "none", extra]];
-  checkTrue["without the h.c. the engine reproduces the thesis EOM exactly",
+  checkTrue["without the h.c. the engine reproduces the reference EOM exactly",
     Sort[appear] === expected];
 ];
 

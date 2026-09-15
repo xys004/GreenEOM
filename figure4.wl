@@ -1,7 +1,7 @@
 (* Data for the figure that separates the graphene ring from the silicene one.
 
    lambda_R2 is the coupling that distinguishes the two: at lambda_R2 = 0 the
-   model is Emma's graphene ring, and lambda_R2 > 0 is Dayanna's silicene ring.
+   model is the graphene ring, and lambda_R2 > 0 is the silicene ring.
    The point of the figure is that without the Peierls phase on the range-two
    hops the spin current cannot tell them apart at half filling of a ring with
    N = 2 (mod 4), which is the case Sec. III B says is "a natural one to plot".

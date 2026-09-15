@@ -17,7 +17,7 @@
      G(t,t') = -i <T_c A(t) B(t')>
      i d_t G = delta(t,t') <[A,B]_-+> + <<[A,H];B>>
      Fourier: w G(w) = norm <[A,B]_-+> + <<[A,H];B>>_w
-     with norm = 1/Sqrt[2 Pi] by default (thesis convention); use 1/(2 Pi) for
+     with norm = 1/Sqrt[2 Pi] by default (reference convention); use 1/(2 Pi) for
      Zubarev's, or 1 for the bare resolvent.
 *)
 

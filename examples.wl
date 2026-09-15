@@ -38,7 +38,7 @@ Module[{h, cl, sol, g, sigma, want},
 
 Print[""];
 Print["##############################################"];
-Print["# B. Mesoscopic ring (thesis Hamiltonian)     "];
+Print["# B. Mesoscopic ring (Maiti Hamiltonian)      "];
 Print["##############################################"];
 
 (* Reusable ring builder.  Spin labels: +1 = up, -1 = down.
@@ -68,7 +68,7 @@ ringH[ns_, t_, th_, al_, be_] :=
   ];
 
 Print[""];
-Print[" B1. ten sites, hopping only -- against the thesis result (eq. green1)"];
+Print[" B1. ten sites, hopping only -- against the reference closed form"];
 
 Module[{h, cl, sol, g1, g2, w1, w2, den},
   h = ringH[10, t, th, 0, 0];
@@ -88,8 +88,8 @@ Module[{h, cl, sol, g1, g2, w1, w2, den},
   w2 = -Exp[-I th] t ((1 + Exp[10 I th]) t^8 - 10 t^6 \[Omega]^2 +
         15 t^4 \[Omega]^4 - 7 t^2 \[Omega]^6 + \[Omega]^8)/den;
 
-  check["G_{n+1,n} matches thesis eq. (green1)", FullSimplify[g1 - w1], 0];
-  check["G_{n,n+1} matches thesis eq. (610)", FullSimplify[g2 - w2], 0];
+  check["G_{n+1,n} matches the reference closed form", FullSimplify[g1 - w1], 0];
+  check["G_{n,n+1} matches the reference closed form", FullSimplify[g2 - w2], 0];
 ];
 
 Print[""];

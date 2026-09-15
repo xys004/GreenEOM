@@ -29,7 +29,7 @@ Print["  Ruptura de la simetria E <-> -E  (0 = simetrico):"];
 ph0 = 2 Pi (1/4)/ns;
 Print["    solo NN (su PRB), lR=0.2            : ",phBreak[0,2/10,ph0,1]];
 Print["    + NNN con fase de Peierls, lEO=0.3  : ",phBreak[3/10,2/10,ph0,1]];
-Print["    + NNN SIN fase (las tesis), lEO=0.3 : ",phBreak[3/10,2/10,ph0,0]];
+Print["    + NNN SIN fase, lEO=0.3 : ",phBreak[3/10,2/10,ph0,0]];
 checkTrue["NN puro conserva la simetria particula-hueco",phBreak[0,2/10,ph0,1]<10^-10];
 checkTrue["el termino a segundos vecinos la rompe (con fase)",phBreak[3/10,2/10,ph0,1]>10^-3];
 checkTrue["y la rompe igual SIN fase",phBreak[3/10,2/10,ph0,0]>10^-3];

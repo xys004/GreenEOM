@@ -80,10 +80,10 @@ Module[{h, cl, sol, g},
 
 Print[""];
 Print["=============================================="];
-Print[" 4. mesoscopic ring (Maiti / thesis Hamiltonian)"];
+Print[" 4. mesoscopic ring (Maiti Hamiltonian)"];
 Print["=============================================="];
 
-(* Ring Hamiltonian, exactly the one of the thesis:
+(* Ring Hamiltonian, exactly the reference one:
      H = sum_n cd_n eps_n c_n
        + sum_n ( cd_{n+1} . T(n) . c_n e^{I th} + h.c. )
    with  T(n) = {{t, -I al e^{-I ph} + be e^{I ph}},
@@ -98,7 +98,7 @@ ringH[ns_, t_, th_, al_, be_] :=
        reads phi_1 as 0 rather than 2 Pi, so the closing bond comes out a full
        Pi away from where it belongs; the canonical form, phi_n + m Pi/N, has
        no such special case. But these are regressions against Green functions
-       derived by hand in the thesis, and a regression has to be run in the
+       obtained outside the generator, and a regression has to be run in the
        convention of the thing it reproduces -- otherwise it tests the model
        rather than the generator. Every result the paper reports for itself
        uses the canonical angle. *)
@@ -120,9 +120,9 @@ ringH[ns_, t_, th_, al_, be_] :=
 
 Print[""];
 Print[" 4a. three sites, hopping only  (vs the closed form transcribed below \
-as thesisG = Eq. (three-site) of the paper; provenance: 'tres sitios.pdf')"];
+as referenceG = the three-site closed form)"];
 
-Module[{h, cl, sol, g, den, roots, want, thesisG},
+Module[{h, cl, sol, g, den, roots, want, referenceG},
   h = ringH[3, t, th, 0, 0];
   cl = CloseEOM[{GF[Ann[c, {2, 1}], Cre[c, {1, 1}]]}, h];
   Print["  equations: ", Length[cl["Equations"]],
@@ -132,18 +132,17 @@ Module[{h, cl, sol, g, den, roots, want, thesisG},
   Print["  G_{n+1,n} = ", InputForm[g]];
   den = Denominator[Together[g]];
   roots = \[Omega] /. Solve[den == 0, \[Omega]];
-  (* (i) the literal closed form, transcribed by hand from the thesis appendix
-     ('tres sitios.pdf'); this IS Eq. (three-site) of the paper. The comparison
-     is against this in-script transcription, so the test is self-contained --
-     'tres sitios.pdf' is not read at run time. *)
-  thesisG = -(Exp[I th] t (t + Exp[3 I th] \[Omega]))/
+  (* (i) the literal closed form, transcribed by hand below. The comparison
+     is against this in-script transcription, so the test is self-contained
+     and reads no external document at run time. *)
+  referenceG = -(Exp[I th] t (t + Exp[3 I th] \[Omega]))/
              (Sqrt[2 Pi] (Exp[6 I th] t^3 + t^3 + 3 Exp[3 I th] t^2 \[Omega] -
                           Exp[3 I th] \[Omega]^3));
-  check["G_{n+1,n} equals the closed form transcribed here as thesisG (Eq. three-site of the paper; provenance 'tres sitios.pdf')",
-    Simplify[g - thesisG], 0];
-  (* (ii) the poles the thesis quotes explicitly *)
+  check["G_{n+1,n} equals the closed form transcribed here as referenceG",
+    Simplify[g - referenceG], 0];
+  (* (ii) the poles the reference quotes explicitly *)
   want = Table[2 t Cos[th + 2 Pi m/3], {m, 0, 2}];
-  checkTrue["poles = 2tCos[th], -tCos[th] +- Sqrt[3] t Sin[th]  (thesis)",
+  checkTrue["poles = 2tCos[th], -tCos[th] +- Sqrt[3] t Sin[th]",
     Length[roots] === 3 &&
     Max[Abs[Sort[N[roots /. {t -> 1, th -> 37/100}]] -
             Sort[N[{2 t Cos[th], -t Cos[th] + Sqrt[3] t Sin[th],
@@ -154,7 +153,7 @@ Module[{h, cl, sol, g, den, roots, want, thesisG},
 ];
 
 Print[""];
-Print[" 4b. two sites, hopping only  (vs the poles written out below; provenance: 'TwoSites.nb')"];
+Print[" 4b. two sites, hopping only  (vs the poles written out below; written out here)"];
 
 Module[{h, cl, sol, g, den, roots},
   h = ringH[2, t, th, 0, 0];
@@ -165,20 +164,20 @@ Module[{h, cl, sol, g, den, roots},
   den = Denominator[Together[g]];
   roots = Simplify[\[Omega] /. Solve[den == 0, \[Omega]]];
   Print["  poles = ", InputForm[roots]];
-  checkTrue["poles = +- 2 t Cos[th]  (closed form written out here; provenance TwoSites.nb)",
+  checkTrue["poles = +- 2 t Cos[th]  (closed form written out here; written out here)",
     Max[Abs[Sort[N[roots /. {t -> 1, th -> 37/100}]] -
             Sort[N[{2 t Cos[th], -2 t Cos[th]} /. {t -> 1, th -> 37/100}]]]] < 10^-10];
 ];
 
 Print[""];
-Print[" 4c. two sites with Rashba + Dresselhaus (vs 'want' written out below; provenance: TwoSites.nb eq1..eq4)"];
+Print[" 4c. two sites with Rashba + Dresselhaus (vs 'want' written out below; written out here)"];
 
 Module[{h, cl, eqs, e1, lhs, rhs, g1, g2, g3, g4, want},
   h = ringH[2, t, th, al, be];
   cl = CloseEOM[{GF[Ann[c, {2, 1}], Cre[c, {1, 1}]]}, h];
   Print["  equations: ", Length[cl["Equations"]],
         "   unknowns: ", Length[cl["Unknowns"]]];
-  (* TwoSites.nb names:
+  (* reference names:
        g1 = G_{n+1 up, n up}   g2 = G_{n up, n up}
        g3 = G_{n down, n up}   g4 = G_{n+1 down, n up}
      Its eq1 reads
@@ -192,7 +191,7 @@ Module[{h, cl, eqs, e1, lhs, rhs, g1, g2, g3, g4, want},
   Print["  generated eq1 rhs = ", InputForm[e1[[2]]]];
   want = 2 t Cos[th] g2 +
          2 I Sin[th] (be Exp[I Pi/2] - I al Exp[-I Pi/2]) g3;
-  check["eq1 matches the hand form transcribed here as want (provenance TwoSites.nb)", Simplify[e1[[2]] - want], 0];
+  check["eq1 matches the hand form transcribed here as want (written out here)", Simplify[e1[[2]] - want], 0];
 ];
 
 Print[""];

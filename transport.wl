@@ -1,6 +1,7 @@
-(* Judith's mesoscopic ring, opened up: two leads, Landauer-Buttiker transport.
+(* The Rashba-Dresselhaus mesoscopic ring, opened up: two leads,
+   Landauer-Buttiker transport.
    The ring Hamiltonian is the SAME operator-level H that reproduced the
-   thesis's persistent-current results, so the transport inherits that
+   reference persistent-current results, so the transport inherits that
    validation. Pure ASCII. *)
 
 $pass = 0; $fail = 0;
@@ -15,7 +16,7 @@ checkNum[name_String, got_, want_, tol_: 10^-8] :=
 DeclareSpecies[c, "Fermion"];
 
 (* ---------------------------------------------------------------- *)
-(* the ring, exactly as in the thesis                                 *)
+(* the ring, exactly as in the reference                              *)
 (* ---------------------------------------------------------------- *)
 
 ringH[ns_, t_, th_, al_, be_] :=
@@ -93,7 +94,7 @@ pol[ns_, alv_, bev_, thv_, g_, w_] :=
     (m[[1, 1]] + m[[1, 2]] - m[[2, 1]] - m[[2, 2]])/Total[m, 2]];
 
 Print["=============================================="];
-Print[" Judith's ring, opened: setup"];
+Print[" Rashba-Dresselhaus ring, opened: setup"];
 Print["=============================================="];
 Print["  6 sites, leads on sites 1 and 4, wide band, Gamma = 0.3, t = 1"];
 Print["  th = 2 Pi phi / N  is the AB phase per bond; phi in flux quanta"];
@@ -178,7 +179,7 @@ Print[""];
 Print["=============================================="];
 Print[" 2b. Rashba <-> Dresselhaus antisymmetry of P_z"];
 Print["=============================================="];
-Print["  The thesis observes (for persistent currents) that Rashba and"];
+Print["  It is observed (for persistent currents) that Rashba and"];
 Print["  Dresselhaus spin currents are opposite, so alpha = beta should give"];
 Print["  'a density very close to zero'. In transport the statement sharpens:"];
 Print["  the map alpha <-> beta is a spin rotation that flips sigma_z, so"];

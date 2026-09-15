@@ -12,9 +12,9 @@ funciones de Green semilla. El paquete:
 4. resuelve el sistema algebraico lineal resultante,
 5. construye `G^r`, `G^a` y `G^<` en equilibrio.
 
-Es la generalización del esquema manual de la monografía de Judith (anillo
-mesoscópico de Maiti): allí las ecuaciones se derivaban a mano y se tecleaban en
-el notebook; aquí se derivan solas para cualquier H.
+Generaliza el esquema manual para el anillo mesoscópico de Maiti, donde las
+ecuaciones se derivaban a mano y se tecleaban en el notebook. Aquí se derivan
+solas para cualquier H.
 
 `GreenNEQ.wl` añade la capa de **no-equilibrio estacionario (Keldysh)**: contactos
 continuos, `G^r`/`G^a`/`G^<` independientes, transmisión y corriente. Ver más
@@ -26,13 +26,13 @@ Si llegas nuevo, en este orden:
 
 1. **`examples.wl`** — nueve ejemplos trabajados, de un nivel resonante al
    límite atómico de Hubbard. Hace de manual: se lee mejor que esta sección.
-2. **`tests.wl`** — ahí están las regresiones contra la monografía. El bloque
-   `4a` reproduce la forma cerrada de tres sitios *carácter por carácter*,
-   fases incluidas, comparándola contra la expresión transcrita en el propio
-   script (`thesisG`, la ecuación numerada del artículo). Es lo que convence de
-   que el generador no inventa, y no necesita ningún documento externo.
-3. **`family.wl`** — los tres anillos (Judith, Emma, Dayanna) escritos como un
-   solo Hamiltoniano con distintas filas encendidas.
+2. **`tests.wl`** — las regresiones. El bloque `4a` reproduce la forma cerrada
+   de tres sitios *carácter por carácter*, fases incluidas, comparándola contra
+   la expresión transcrita en el propio script (`referenceG`). Es lo que
+   convence de que el generador no inventa, y no necesita ningún documento
+   externo.
+3. **`family.wl`** — los tres anillos, Rashba--Dresselhaus, grafeno y siliceno,
+   escritos como un solo Hamiltoniano con distintas filas encendidas.
 4. **`open_family.wl`** — los mismos tres, pero con dos reservorios.
 
 Todo corre en local:
@@ -79,20 +79,18 @@ Verificado en kernel virgen (Mathematica 12), **122 pruebas**:
 | `convention.wl` (convenios de angulo) | **2/2** |
 
 Las pruebas de regresión más fuertes comparan la derivación simbólica contra
-formas cerradas obtenidas a mano en la monografía y **transcritas literalmente en
+formas cerradas conocidas independientemente y **transcritas literalmente en
 `tests.wl`**: la expresión de referencia va impresa en el propio script, así que
-la verificación es autocontenida y no requiere ningún documento externo (los
-`.pdf`/`.nb` de la monografía son la procedencia de esas expresiones, no una
-dependencia en tiempo de ejecución).
+la verificación es autocontenida y no requiere ningún documento externo.
 
-- **3 sitios**: reproduce carácter por carácter la forma cerrada de tres sitios
-  (transcrita en `tests.wl` como `thesisG`, que es la ecuación numerada del
-  artículo en §IV y procede de `tres sitios.pdf`), fases incluidas.
-- **10 sitios**: reproduce `G_{n+1,n}(ω)` y `G_{n,n+1}(ω)` del capítulo de
-  resultados (ecs. `green1` y siguiente).
+- **3 sitios**: reproduce carácter por carácter la forma cerrada de tres sitios,
+  transcrita en `tests.wl` como `referenceG`, fases incluidas. Sus polos son el
+  espectro conocido de un anillo de tres sitios atravesado por flujo.
+- **10 sitios**: reproduce `G_{n+1,n}(ω)` y `G_{n,n+1}(ω)` obtenidas
+  independientemente del generador.
 - **2 sitios con Rashba + Dresselhaus**: la `eq1` generada coincide con la forma
   escrita a mano (transcrita en `tests.wl` como `want`, procedente de
-  `TwoSites.nb`).
+  el propio script).
 - **Límite atómico de Hubbard**: da el exacto `(1-n)/(ω-ε) + n/(ω-ε-U)`.
 - **Nivel resonante**: produce la autoenergía de hibridación
   `Σ_k V_k²/(ω-ε_k)` sin que se le teclee.
@@ -231,14 +229,14 @@ decae despacio, y una ventana de ±20 ya pierde ~3·10⁻³ del peso, suficiente
 romper las reglas de suma. Integra lejos y dale a `NIntegrate` los puntos de
 resonancia.
 
-## Resultado físico: el anillo de Judith, abierto
+## Resultado físico: el anillo Rashba--Dresselhaus, abierto
 
 `transport.wl` conecta el anillo a dos contactos y calcula transporte
 Landauer-Büttiker. `impurities.wl` intenta falsar el hallazgo.
 
-Su monografía observa —sobre figuras de corrientes persistentes— que las
-corrientes de espín Rashba y Dresselhaus son opuestas, y concluye que α=β debería
-dar "una densidad muy próxima a cero". **En transporte eso es una identidad
+Leyéndolo de las figuras de corrientes persistentes se observa que las
+corrientes de espín Rashba y Dresselhaus son opuestas, lo que sugiere que α=β
+debería dar una densidad muy próxima a cero. **En transporte eso es una identidad
 exacta**, porque la permutación α↔β es una rotación de espín de π alrededor de
 [110] que intercambia σx↔σy e invierte σz:
 
@@ -288,10 +286,11 @@ pero deja de dar igual en cuanto hay términos de dos rangos distintos, que es
 justo el anillo de siliceno. `convention.wl` mide las tres variantes lado a
 lado: con el promedio ingenuo el resultado central del artículo desaparece.
 
-**Excepción deliberada:** `ringH` en `tests.wl` mantiene el promedio de la
-monografía, y lo dice en el propio código. Son regresiones contra funciones de
-Green derivadas a mano en la tesis, y una regresión tiene que correr en el
-convenio de aquello que reproduce; si no, prueba el modelo en vez del generador.
+**Excepción deliberada:** `ringH` en `tests.wl` mantiene el promedio del
+convenio antiguo, y lo dice en el propio código. Son regresiones contra formas
+cerradas obtenidas fuera del generador, y una regresión tiene que correr en el
+convenio de aquello que reproduce; si no, prueba el modelo en vez del
+generador.
 
 ## Ejecutar las pruebas
 
@@ -331,7 +330,7 @@ que sobreviva el viaje PowerShell → ssh → shell remota sin mutilarse.
 - `tests_neq.wl` — regresión de no-equilibrio (24)
 - `transport.wl` — anillo abierto con contactos, transporte Landauer (16)
 - `impurities.wl` — falsación de la identidad P_z(α,β)=−P_z(β,α) (13)
-- `family.wl` — anillos de grafeno (Emma Mora) y siliceno (Dayanna Pereira) (13)
+- `family.wl` — anillos de grafeno y siliceno (13)
 - `open_family.wl` — los tres anillos abiertos con dos reservorios (5)
 - `phsym.wl` — ruptura de la simetría partícula-hueco por los segundos vecinos
 - `scans.wl` — los dos barridos anchos (324 contextos) de la Sec. III B
